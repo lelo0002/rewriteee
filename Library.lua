@@ -31,9 +31,9 @@ local Library = {
 
     FontColor = Color3.fromRGB(255, 255, 255);
     MainColor = Color3.fromRGB(28, 28, 28);
-    BackgroundColor = Color3.fromRGB(20, 20, 20);
-    AccentColor = Color3.fromRGB(0, 85, 255);
-    OutlineColor = Color3.fromRGB(50, 50, 50);
+    BackgroundColor = Color3.fromRGB(28,28,28);
+    AccentColor = Color3.fromRGB(92,115,173);
+    OutlineColor = Color3.fromRGB(55, 55, 55);
     RiskColor = Color3.fromRGB(255, 50, 50),
 
     Black = Color3.new(0, 0, 0);
@@ -2987,14 +2987,16 @@ function Library:CreateWindow(...)
         BorderColor3 = 'AccentColor';
     });
 
-    local WindowLabel = Library:CreateLabel({
-        Position = UDim2.new(0, 7, 0, 0);
-        Size = UDim2.new(0, 0, 0, 25);
-        Text = Config.Title or '';
-        TextXAlignment = Enum.TextXAlignment.Left;
-        ZIndex = 1;
-        Parent = Inner;
-    });
+local WindowLabel = Library:CreateLabel({
+    Position = UDim2.new(0, 7, 0, 0);
+    Size = UDim2.new(0, 0, 0, 25);
+    Text = Config.Title or '';
+    TextXAlignment = Enum.TextXAlignment.Center;
+    TextColor3 = Color3.fromRGB(92,115,173); -- Add this line
+    ZIndex = 1;
+    Parent = Inner;
+});
+
 
     local MainSectionOuter = Library:Create('Frame', {
         BackgroundColor3 = Library.BackgroundColor;
